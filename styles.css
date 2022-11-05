@@ -34,7 +34,7 @@ body {
 }
 
 .image {
-  background-image: url(/images/bg-main-mobile.png);
+  background-image: url(images/bg-main-mobile.png);
   height: 247px;
   width: 100%;
 }
