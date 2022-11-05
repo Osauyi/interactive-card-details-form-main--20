@@ -1,0 +1,310 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --Red: hsl(0, 100%, 66%);
+  --White: hsl(0, 0%, 100%);
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+  --Dark-grayis-violet: hsl(279, 6%, 55%);
+  --Very-dark-violet: hsl(278, 68%, 11%);
+
+  --actBorder: linear-gradient(310deg,
+      hsl(249deg 99% 64%) 0%,
+      hsl(264deg 66% 47%) 50%,
+      hsl(278deg 93% 30%) 100%);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  margin: 0;
+  position: relative;
+}
+
+.image {
+  background-image: url(/images/bg-main-mobile.png);
+  height: 247px;
+  width: 100%;
+}
+
+.text {
+  color: var(--Very-dark-violet);
+  font-weight: 500;
+font-size: .8rem;
+  text-transform: uppercase;
+}
+
+.Myform {
+  padding: 0 18px;
+}
+
+/* Cards******/
+
+.cardFront {
+  width: 80%;
+  position: absolute;
+  z-index: 1;
+  top: 8.25rem;
+  left: 0.625rem;
+}
+
+.cardBack {
+  width: 80%;
+  position: absolute;
+  top: 2.4375rem;
+  left: 3.875rem;
+}
+
+/* CARD PROFILE *********/
+.post{
+  position: absolute;
+  z-index: 1;
+}
+
+
+.Cards {
+  color: var(--Light-grayish-violet);
+}
+
+.cardprofile {
+  top: 9.375rem;
+  left: 1.875rem;
+}
+
+.cardprofile img{
+  height: 40px;
+}
+
+.cardnumb {
+  top: 13.375rem;
+  right: 4.625rem;
+  width: 72%;
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: .25rem;
+}
+
+.cardname {
+  font-size: .8rem;
+   top: 16.375rem;
+   left: 1.9375rem;
+
+  text-transform: uppercase;
+}
+
+.cardDate {
+  right: 5.1875rem;
+  top: 16.375rem;
+  font-size: .8rem;
+}
+
+.cardcvc {
+  top: 7.0625rem;
+  right: 50px;
+  font-size: .8rem;
+}
+
+/* CARD INPUT*************/
+
+.cardText{
+  margin-top: 90px;
+}
+
+
+
+input {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  height: 40px;
+  width: 100%;
+  border: 1px solid var(--Light-grayish-violet);
+  color: var(--Dark-grayis-violet);
+  font-weight: 500;
+  border-radius: 8px;
+  padding-left: 13px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+}
+
+/*     Here */
+input[type=text]:focus{
+  outline: 2px solid ;
+  border-left: red;
+  /* border-right: blue; */
+  /* border-image: var(--Red); */
+  /* background-color: #ffff; */
+  background-image: var(--actBorder);
+}
+
+.errormsg{
+  display: none;
+   color:  var(--Red);
+   margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 0.6rem;
+
+}
+
+
+.datCv{
+  display: flex;
+}
+
+
+.fullDate{
+  display: flex;
+}
+
+.inDate, .inDate2{
+  width: 40%;
+}
+
+.inDate2{
+  margin-left: 10px;
+}
+
+.cvc{
+  width: 100%;
+}
+
+button{
+  background-color: var(--Very-dark-violet);
+  color: var( --Light-grayish-violet);
+  width: 100%;
+  padding: 15px 0;
+  border: none;  
+  border-radius: 10px;
+   font-family: 'Space Grotesk', sans-serif;
+   font-size: .95rem;
+  font-weight: 500;
+}
+
+footer{
+  margin-top: 4.375rem;
+}
+
+/* Thank you page */
+.container{
+  width: 90%;
+  margin: 0 auto;
+}
+
+h1{
+  text-transform: uppercase;
+  color: var(--Very-dark-violet);
+  font-weight: 500;
+  letter-spacing: .4rem;
+  margin-bottom: 0;
+}
+
+p{
+  color: var(--Dark-grayis-violet);
+  font-size: 1.3rem;
+  margin: 10px 0 55px;
+}
+
+.ThankNote{   
+  text-align: center;
+  margin-top: 90px;
+}
+
+
+
+@media screen  and (min-width: 62.5rem){
+
+
+  .image{
+    background-image: url(images/bg-main-desktop.png);
+    width: 30.1875rem;
+    height: 900px;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .Myform, .container{
+    display: flex;
+    flex-direction: row;
+    height: 56.25rem;
+    justify-content: flex-end;
+
+    
+  }
+
+  .cardText, .ThankNote{
+    width: 26%;
+
+    margin: 12.5rem 12.5rem 0 0;
+  }
+
+  .Cards{
+    width: 10%;
+  }
+
+  .cardFront {
+  width: 25%;
+  left: 200px;
+}
+
+.cardBack {
+  width: 25%;
+  top: 23.25rem;
+  left: 19.25rem;
+}
+
+
+.cardprofile {
+  left: 14.375rem;
+}
+
+.cardprofile img{
+  height: 40px;
+}
+
+.cardnumb {
+  top: 15.5625rem;
+  left: 14.3125rem;
+  width: 20%;
+  font-size: 1.15rem;
+}
+
+.cardname {
+  
+   top: 18.4375rem;
+   left: 14.3125rem;
+
+}
+
+.cardDate {
+  top: 18.4375rem;
+  left: 32.375rem;
+  width: 5%;
+
+}
+
+.cardcvc {
+  top: 29.0625rem;
+  left: 38.3125rem;
+  width: 5%;
+}
+
+footer{
+  margin: 0;
+}
+
+.ThankNote{
+  margin-top: 200px;
+}
+
+}

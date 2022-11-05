@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="image"></div>
+      <div class="container">
+        <div class="Cards">
+          <img
+            class="cardFront"
+            src="images/bg-card-front.png"
+            alt="card front"
+          />
+          <img src="images/bg-card-back.png" alt="card back" class="cardBack" />
+          <div class="cardprofile post">
+            <img src="/images/card-logo.svg" alt="card profile" />
+          </div>
+          <div class="cardnumb post">0000 0000 0000 0000</div>
+          <div class="cardname post">Jane Appleseed</div>
+          <div class="cardDate post">00/00</div>
+          <div class="cardcvc post">000</div>
+        </div>
+        <div class="ThankNote">
+          <img src="/images/icon-complete.svg" alt="Checked logo" />
+          <h1>Thank you!</h1>
+          <p>we've added your card details</p>
+          <button>Continue</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Completed state start -->
+
+    <!-- Thank you! We've added your card details Continue -->
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Osauyi</a>.
+      </div>
+    </footer>
+  </body>
+  <script>
+    document.querySelector(".cardname").innerHTML =
+      localStorage.getItem("storename");
+    const CardNumber = (document.querySelector(".cardnumb").innerHTML =
+      localStorage.getItem("storenumber"));
+    const CardDate = (document.querySelector(
+      ".cardDate"
+    ).innerHTML = `${localStorage.getItem(
+      "storemonth"
+    )} / ${localStorage.getItem("storeyear")}`);
+    const CardCVC = (document.querySelector(".cardcvc").innerHTML =
+      localStorage.getItem("storecvc"));
+  </script>
+</html>

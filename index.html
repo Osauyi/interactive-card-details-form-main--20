@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="image"></div>
+
+      <form action="/Thankyou.html" name="myForm" class="Myform">
+        <div class="Cards">
+          <img
+            class="cardFront"
+            src="images/bg-card-front.png"
+            alt="card front"
+          />
+          <img src="images/bg-card-back.png" alt="card back" class="cardBack" />
+          <div class="cardprofile post">
+            <img src="/images/card-logo.svg" alt="card profile" />
+          </div>
+          <div class="cardnumb post">0000 0000 0000 0000</div>
+          <div class="cardname post">Jane Appleseed</div>
+          <div class="cardDate post">00/00</div>
+          <div class="cardcvc post">000</div>
+        </div>
+        <div class="cardText">
+          <div class="name text">
+            Cardholder Name
+            <input
+              type="text"
+              id="inputname"
+              name="name"
+              placeholder="e.g. Jane Appleseed"
+            />
+            <div class="errormsg">Input Name</div>
+            <div class="numb text">
+              Card number
+              <input
+                type="number"
+                name="number"
+                id="inputnumber"
+                placeholder="e.g. 1234 5678 9123 0000"
+              />
+              <div class="errormsg">Wrong format, numbers only</div>
+            </div>
+            <div class="datCv">
+              <div class="date text">
+                Exp. Date (MM/YY)
+                <div class="fullDate">
+                  <input
+                    class="inDate"
+                    type="number"
+                    name="Month"
+                    id="inputmonth"
+                    max="31"
+                    placeholder=" MM"
+                  />
+                  <input
+                    class="inDate2"
+                    type="number"
+                    name="Year"
+                    id="inputyear"
+                    max="40"
+                    placeholder="YY"
+                  />
+                </div>
+                <div class="errormsg">Can't be blank</div>
+              </div>
+              <div class="cvc text">
+                CVC
+                <input
+                  type="number"
+                  id="inputcvc"
+                  name="cvc"
+                  placeholder="e.g. 123"
+                />
+                <div class="errormsg">Can't be blank</div>
+              </div>
+            </div>
+          </div>
+          <button type="submit">Confirm</button>
+        </div>
+      </form>
+    </main>
+
+    <!-- Completed state start -->
+
+    <!-- Thank you! We've added your card details Continue -->
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Osauyi</a>.
+      </div>
+    </footer>
+  </body>
+  <script src="index.js"></script>
+</html>
