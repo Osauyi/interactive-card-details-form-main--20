@@ -140,13 +140,10 @@ input {
 
 /*     Here */
 input[type=text]:focus{
-  outline: 2px solid ;
-  border-left: red;
-  /* border-right: blue; */
-  /* border-image: var(--Red); */
-  /* background-color: #ffff; */
-  background-image: var(--actBorder);
+  /* outline: 5px solid  red; */
 }
+
+
 
 .errormsg{
   display: none;
